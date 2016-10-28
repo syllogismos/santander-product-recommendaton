@@ -1,0 +1,12 @@
+*.zip
+*.txt
+.ipynb_checkpoints/*
+*.pyc
+*.pkl
+ec2*
+split_train/
+data/
+.kaggle-cli/
+Playground.ipynb
+scripts/kaggle/aws_config.py
+*.csv
