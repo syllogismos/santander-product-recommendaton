@@ -633,3 +633,80 @@ $ cat train_ver2.csv | cut -d , -f 24 | sort -d | uniq -c | head -100
   17 100013.7
   17 100014.21
 ```
+
+# Product stats
+
+```
+0    13645913
+1        1396
+Name: ind_ahor_fin_ult1, dtype: int64
+0    13646993
+1         316
+Name: ind_aval_fin_ult1, dtype: int64
+1    8945588
+0    4701721
+Name: ind_cco_fin_ult1, dtype: int64
+0    13641933
+1        5376
+Name: ind_cder_fin_ult1, dtype: int64
+0    12543689
+1     1103620
+Name: ind_cno_fin_ult1, dtype: int64
+0    13518012
+1      129297
+Name: ind_ctju_fin_ult1, dtype: int64
+0    13514567
+1      132742
+Name: ind_ctma_fin_ult1, dtype: int64
+0    11886693
+1     1760616
+Name: ind_ctop_fin_ult1, dtype: int64
+0    13056301
+1      591008
+Name: ind_ctpp_fin_ult1, dtype: int64
+0    13623034
+1       24275
+Name: ind_deco_fin_ult1, dtype: int64
+0    13624641
+1       22668
+Name: ind_deme_fin_ult1, dtype: int64
+0    13060928
+1      586381
+Name: ind_dela_fin_ult1, dtype: int64
+0    12518082
+1     1129227
+Name: ind_ecue_fin_ult1, dtype: int64
+0    13395025
+1      252284
+Name: ind_fond_fin_ult1, dtype: int64
+0    13566973
+1       80336
+Name: ind_hip_fin_ult1, dtype: int64
+0    13522150
+1      125159
+Name: ind_plan_fin_ult1, dtype: int64
+0    13611452
+1       35857
+Name: ind_pres_fin_ult1, dtype: int64
+0    12930329
+1      716980
+Name: ind_reca_fin_ult1, dtype: int64
+0    13041523
+1      605786
+Name: ind_tjcr_fin_ult1, dtype: int64
+0    13297834
+1      349475
+Name: ind_valo_fin_ult1, dtype: int64
+0    13594798
+1       52511
+Name: ind_viv_fin_ult1, dtype: int64
+0.0    12885285
+1.0      745961
+Name: ind_nomina_ult1, dtype: int64
+0.0    12821161
+1.0      810085
+Name: ind_nom_pens_ult1, dtype: int64
+0    11901597
+1     1745712
+Name: ind_recibo_ult1, dtype: int64
+```
