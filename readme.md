@@ -83,6 +83,12 @@ Id | Column Name |	Description
 
 # Premilinary data analysis
 
+## 2. ncodpers
+```
+$ cat train_ver2.csv | cut -d , -f 2 | sort -d | uniq -c | wc -l
+  956646
+```
+
 ## 3. ind_empleado
 ```
 $ cat train_ver2.csv | cut -d , -f 3 | sort -d | uniq -c   
