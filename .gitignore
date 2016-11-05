@@ -7,6 +7,7 @@ ec2*
 split_train/
 data/
 .kaggle-cli/
+.vscode
 Playground.ipynb
 scripts/kaggle/aws_config.py
 *.csv
