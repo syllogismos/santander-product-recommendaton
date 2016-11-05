@@ -11,7 +11,7 @@ from boto.s3.key import Key
 import scripts.kaggle.aws_config as aws_config
 
 
-def make_submission(file_name, bucket_name='bosch-submissions',
+def make_submission(file_path, bucket_name='bosch-submissions',
                     description='submission description', upload_to_s3=False,
                     submit=False, compress=True):
     """
@@ -28,17 +28,17 @@ def make_submission(file_name, bucket_name='bosch-submissions',
 
     and aws_config should be containing you aws secret key for s3 to work.
     """
-
+    file_name = os.path.basename(file_path)
     if compress:
         compression = zipfile.ZIP_DEFLATED
-        zip_file_name = file_name + '.zip'
+        zip_file_name = file_path + '.zip'
         zf = zipfile.ZipFile(zip_file_name, mode='w')
         print "Compressing file"
-        zf.write(file_name, compress_type=compression)
+        zf.write(file_path, arcname=file_name, compress_type=compression)
         print "Compression done"
         zf.close()
     else:
-        zip_file_name = file_name
+        zip_file_name = file_path
 
     if upload_to_s3:
         conn = boto.connect_s3(aws_config.AWS_ACCESS_KEY,
