@@ -11,7 +11,7 @@ from boto.s3.key import Key
 import scripts.kaggle.aws_config as aws_config
 
 
-def make_submission(file_path, bucket_name='bosch-submissions',
+def make_submission(file_path, bucket_name='santander',
                     description='submission description', upload_to_s3=False,
                     submit=False, compress=True):
     """
