@@ -215,7 +215,7 @@ def process_data(in_file_name, cust_dict):
     return x_vars_list, y_vars_list, cust_dict
 
 
-def run_xgb(x_train, y_train, seed_val=123):
+def run_xgb(x_train, y_train, seed_val=1428):
     "dfgsd"
     param = {}
     param['objective'] = 'multi:softprob'
