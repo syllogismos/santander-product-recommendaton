@@ -153,9 +153,9 @@ def process_data_from_original_dataframe(combined):
         temp_enc.fit(combined[col])
         combined[col] = temp_enc.transform(combined[col])
         encoders.append(temp_enc)
-    return combined
+    return combined, encoders
 
-combined = process_data_from_original_dataframe(combined)
+combined, encoders = process_data_from_original_dataframe(combined)
 
 train = combined.loc[combined.fecha_dato == '2015-05-28', :].\
     reset_index(drop=True)
