@@ -1,4 +1,5 @@
 #!/bin/sh
+# cat train_ver2.csv| sort -t , -nk2 > sorted_train.csv
 grep -e '^2015-01-28' sorted_train.csv > train_2015_01_28.csv
 grep -e '^2015-02-28' sorted_train.csv > train_2015_02_28.csv
 grep -e '^2015-03-28' sorted_train.csv > train_2015_03_28.csv
