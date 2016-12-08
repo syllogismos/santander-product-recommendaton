@@ -166,13 +166,14 @@ del train['index'], test['index']
 del train['fecha_dato'], test['fecha_dato']
 
 added_products.set_index('ncodpers', inplace=True)
+train.set_index('ncodpers', inplace=True)
+test.set_index('ncodpers', inplace=True)
 
 label_encoder = LabelEncoder()
-label_encoder.fit(added_products)
+label_encoder.fit(added_products.added_product)
 added_products['encoded_products'] = label_encoder.\
     transform(added_products['added_product'])
 
-train.set_index('ncodpers', inplace=True)
 
 xTrain = train.loc[added_products.index, :]
 
@@ -200,7 +201,6 @@ evallist = [(xg_train, 'train')]
 
 xgb_model = xgb.train(plist, xg_train, num_rounds, evallist)
 
-test.set_index('ncodpers', inplace=True)
 xg_test = xgb.DMatrix(test)
 preds = xgb_model.predict(xg_test)
 top_t_products = label_encoder.inverse_transform(np.argsort(preds, axis=1)
